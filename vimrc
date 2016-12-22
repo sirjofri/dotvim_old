@@ -9,4 +9,5 @@ execute pathogen#infect()
 augroup filetypedetect
 	au! BufNewFile,BufRead *.inc if getline(1) =~ '<' | setf php | endif
 	au! BufNewFile,BufRead * if &ft == 'php'||&ft == 'html' | set tabstop=2 | endif
+	au! BufNewFile,BufRead * if &ft == 'css' | set tabstop=3 | endif
 augroup END
