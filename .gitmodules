@@ -18,6 +18,3 @@
 	path = bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
 	ignore = dirty
-[submodule "bundle/vim-wakatime"]
-	path = bundle/vim-wakatime
-	url = git://github.com/wakatime/vim-wakatime.git
