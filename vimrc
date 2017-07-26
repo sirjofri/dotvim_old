@@ -4,6 +4,10 @@ execute pathogen#infect()
 :set si
 :set nu
 
+:hi VertSplit ctermbg=green ctermfg=22
+:hi StatusLine ctermbg=green ctermfg=22
+:hi StatusLineNC ctermbg=green ctermfg=22
+
 :nnoremap <C-n> :NERDTreeToggle<CR>
 
 function! Synctex()
