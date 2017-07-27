@@ -21,3 +21,9 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-tmux-navigator"]
+	path = bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/vim-tmux-runner"]
+	path = bundle/vim-tmux-runner
+	url = https://github.com/christoomey/vim-tmux-runner.git

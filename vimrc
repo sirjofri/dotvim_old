@@ -24,3 +24,6 @@ augroup filetypedetect
 	au! BufNewFile,BufRead * if &ft == 'cpp'||&ft == 'c' | set tabstop=4 | endif
 	au! BufNewFile,BufRead * if &ft == 'tex' | set tabstop=3 | endif
 augroup END
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
