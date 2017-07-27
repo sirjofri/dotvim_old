@@ -3,7 +3,7 @@ execute pathogen#infect()
 :syntax on
 :colorscheme koehler
 :set si
-:set nu
+:set relativenumber
 
 :hi VertSplit ctermbg=green ctermfg=22
 :hi StatusLine ctermbg=green ctermfg=22
