@@ -7,7 +7,7 @@ install: ~/.vimrc vtn
 
 .PHONY: upgrade
 upgrade:
-	git submodule foreach git pull origin master
+	git submodule update --remote --merge
 
 .PHONY: vtn
 vtn:
