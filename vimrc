@@ -1,13 +1,17 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+filetype off
 :syntax on
+filetype plugin indent on
 :colorscheme koehler
 :set si
+:set hls
 :set relativenumber
+:set number
 
-:hi VertSplit ctermbg=green ctermfg=22
-:hi StatusLine ctermbg=green ctermfg=22
-:hi StatusLineNC ctermbg=green ctermfg=22
+:hi VertSplit ctermbg=green ctermfg=0
+:hi StatusLine ctermbg=4 ctermfg=green
+:hi StatusLineNC ctermbg=green ctermfg=4 cterm=NONE
 
 :nnoremap <C-n> :NERDTreeToggle<CR>
 
