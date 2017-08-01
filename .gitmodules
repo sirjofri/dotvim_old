@@ -30,3 +30,6 @@
 [submodule "bundle/vim-commentout"]
 	path = bundle/vim-commentout
 	url = git@github.com:sirjofri/vim-commentout.git
+[submodule "bundle/vim-biblereader"]
+	path = bundle/vim-biblereader
+	url = git@github.com:sirjofri/vim-biblereader.git
