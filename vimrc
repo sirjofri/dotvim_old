@@ -14,6 +14,7 @@ filetype plugin indent on
 :hi StatusLineNC ctermbg=green ctermfg=4 cterm=NONE
 
 :nnoremap <C-n> :NERDTreeToggle<CR>
+:nnoremap <C-u> :noh<CR>
 
 function! Synctex()
 	" remove silent for debugging
