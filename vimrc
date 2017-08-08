@@ -8,6 +8,7 @@ filetype plugin indent on
 :set hls
 :set relativenumber
 :set number
+:set so=3
 
 :hi VertSplit ctermbg=green ctermfg=0
 :hi StatusLine ctermbg=4 ctermfg=green
@@ -32,3 +33,13 @@ augroup END
 
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+if filereadable(expand("~/.vim/locals.vim"))
+	source ~/.vim/locals.vim
+endif
+
+if filereadable(".settings.vim")
+	source .settings.vim
+endif
+
+" vim:ts=3:sw=3:noet
