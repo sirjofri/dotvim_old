@@ -36,3 +36,6 @@
 [submodule "bundle/vim-glissues"]
 	path = bundle/vim-glissues
 	url = https://github.com/sirjofri/vim-glissues.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
