@@ -10,6 +10,10 @@ filetype plugin indent on
 :set number
 :set so=3
 
+:set encoding=utf-8
+:set listchars=tab:→\ ,trail:·
+:set list
+
 " see http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
 :set viminfo='100,<50,s10,h,\"100,:20,%
 function! ResCur()
