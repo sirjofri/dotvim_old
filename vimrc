@@ -64,10 +64,10 @@ map <C-enter> :call Synctex()<cr>
 
 augroup filetypedetect
 	au! BufNewFile,BufRead *.inc setf php | set tabstop=2
-	au! BufNewFile,BufRead * if &ft == 'php'||&ft == 'html' | set tabstop=2 | endif
-	au! BufNewFile,BufRead * if &ft == 'css' | set tabstop=3 | endif
-	au! BufNewFile,BufRead * if &ft == 'cpp'||&ft == 'c' | set tabstop=4 | endif
-	au! BufNewFile,BufRead * if &ft == 'tex' | set tabstop=3 | endif
+	au! BufNewFile,BufRead * if &ft == 'php'||&ft == 'html' | set tabstop=2 | set sw=2 | endif
+	au! BufNewFile,BufRead * if &ft == 'css' | set tabstop=3 | set sw=3 | endif
+	au! BufNewFile,BufRead * if &ft == 'cpp'||&ft == 'c' | set tabstop=4 | set sw=4 | endif
+	au! BufNewFile,BufRead * if &ft == 'tex' | set tabstop=3 | set sw=3 | endif
 augroup END
 
 autocmd InsertEnter * :set number
