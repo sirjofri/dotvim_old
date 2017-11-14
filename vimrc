@@ -68,7 +68,7 @@ augroup filetypedetect
 	au! BufNewFile,BufRead * if &ft == 'css' | set tabstop=3 | set sw=3 | endif
 	au! BufNewFile,BufRead * if &ft == 'cpp'||&ft == 'c' | set tabstop=4 | set sw=4 | endif
 	au! BufNewFile,BufRead * if &ft == 'tex' | set tabstop=3 | set sw=3 | endif
-	au! BufNewFile,BufRead * if &ft == 'markdown' | set ts=3 | set sw=3 | set spelllang=de | set spell | set tw=78 | endif
+	au! BufNewFile,BufRead * if &ft == 'markdown' | set ts=3 | set sw=3 | set spelllang=de,en | set spell | set tw=78 | set colorcolumn=+0 | endif
 augroup END
 
 autocmd InsertEnter * :set number
