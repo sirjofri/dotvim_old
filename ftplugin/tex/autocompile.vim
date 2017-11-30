@@ -20,4 +20,4 @@ function! <SID>Compile()
 	redraw!
 endfunction
 
-au! BufWritePost,InsertLeave <buffer> silent call <SID>Compile()
+au! BufWritePost <buffer> silent call <SID>Compile()
