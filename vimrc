@@ -56,6 +56,21 @@ augroup END
 :nnoremap <C-n> :NERDTreeToggle<CR>
 :nnoremap <C-u> :noh<CR>
 
+function! HighlightTags()
+	if filereadable("tags")
+		let l:hltime = getftime("tags.vim")
+		let l:tagtime = getftime("tags")
+		if l:hltime < l:tagtime
+			sp tags
+			execute "%s/^\\([^	:]*:\\)\\=\\([^	]*\\).*/syntax keyword Tag \\2/"
+			execute "wq! tags.vim"
+		endif
+		so tags.vim
+	endif
+endfunction
+
+command! Thl :call HighlightTags()
+
 function! Synctex()
 	" remove silent for debugging
 	execute "silent !zathura --synctex-forward " . line('.') . ":" . col('.') . ":" . bufname('%') . " " . g:syncpdf
@@ -73,6 +88,10 @@ augroup END
 
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+if filereadable("./tags.vim")
+	so tags.vim
+endif
 
 if filereadable(expand("~/.vim/locals.vim"))
 	source ~/.vim/locals.vim
