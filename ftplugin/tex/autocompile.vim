@@ -7,6 +7,8 @@ setlocal textwidth=78
 setlocal colorcolumn=+0
 setlocal tabstop=3
 setlocal shiftwidth=3
+setlocal spell
+setlocal spelllang=de,en
 
 if filereadable("Makefile")
 	set makeprg=make\ 2>/dev/null\ &>/dev/null
