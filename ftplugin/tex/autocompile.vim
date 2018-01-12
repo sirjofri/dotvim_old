@@ -3,12 +3,14 @@ if exists("b:did_tex_autocomplete")
 endif
 let b:did_tex_autocomplete = 1
 
+" some general tex settings
 setlocal textwidth=78
 setlocal colorcolumn=+0
 setlocal tabstop=3
 setlocal shiftwidth=3
 setlocal spell
 setlocal spelllang=de,en
+"""""""""""""""""""""""""""
 
 if filereadable("Makefile")
 	set makeprg=make\ 2>/dev/null\ &>/dev/null
