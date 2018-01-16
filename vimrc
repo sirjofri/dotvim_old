@@ -14,6 +14,9 @@ filetype plugin indent on
 :set listchars=tab:→\ ,trail:·
 :set list
 
+" :help usr_25 - adds _j justify function
+:packadd! justify
+
 " see http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
 :set viminfo='100,<50,s10,h,\"100,:20,%
 function! ResCur()
