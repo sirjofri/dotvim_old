@@ -1,5 +1,5 @@
 .PHONY: install
-install: ~/.vimrc vtn
+install: ~/.vimrc
 	git submodule update --init
 
 ~/.vimrc: ~/.vim/vimrc
@@ -8,8 +8,3 @@ install: ~/.vimrc vtn
 .PHONY: upgrade
 upgrade:
 	git submodule update --remote --merge
-
-.PHONY: vtn
-vtn:
-	echo -e "\n# VimTmuxNavigator" >> ~/.tmux.conf
-	echo -e "\nsource ~/.vim/misc/tmux.conf" >> ~/.tmux.conf

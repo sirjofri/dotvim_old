@@ -1,4 +1,4 @@
-my .vim configuration
+My .vim configuration
 =====================
 
 This repository contains my `.vim` configuration, ready to install.
@@ -17,4 +17,3 @@ Installation
 	make
 
 For upgrading the submodules (installed plugins) simply type `make upgrade`.
-To initialize tmux use `make vtn`.
