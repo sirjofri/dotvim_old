@@ -1,5 +1,7 @@
 " Source: https://tex.stackexchange.com/questions/130586/vim-nice-folding-function
 " Initialization {{{
+"
+" support for table, figure and lstlisting added by sirjofri
 
 if exists('b:loaded_mylatexfolding')
 	finish
@@ -42,7 +44,10 @@ endif
 if !exists('g:LatexBox_folded_environments')
 	let g:LatexBox_folded_environments = [
 				\ "abstract",
-				\ "frame"
+				\ "frame",
+				\ "figure",
+				\ "table",
+				\ "lstlisting"
 				\ ]
 endif
 
@@ -191,6 +196,32 @@ function! s:CaptionFrame(line)
 	endif
 endfunction
 
+function! s:CaptionFloat(line)
+	let i = v:foldstart
+	while i <= v:foldend
+		if getline(i) =~ '^\s*\\caption'
+			return matchstr(getline(i),
+						\ '^\s*\\caption\(\[.*\]\)\?{\zs.\+')
+		end
+		let i += 1
+	endwhile
+
+	return ""
+endfunction
+
+function! s:CaptionLstlisting(line)
+	let i = v:foldstart
+	while i <= v:foldend
+		if getline(i) =~ '^\s*\\begin{lstlisting}[\(\[.*\]\)\?caption='
+			return matchstr(getline(i),
+						\ '^\s*\\begin{lstlisting}[\(\[.*\]\)\?caption=\zs.\+,')
+		end
+		let i += 1
+	endwhile
+
+	return ""
+endfunction
+
 " }}}
 " LatexBox_FoldText {{{
 
@@ -245,7 +276,16 @@ function! LatexBox_FoldText()
 			let title = 'Abstract'
 		elseif env == 'frame'
 			let caption = s:CaptionFrame(line)
-			let title = 'Frame - ' . substitute(caption, '}\s*$', '','')
+			let title = 'Frame: ' . substitute(caption, '}\s*$', '','')
+		elseif env == 'figure'
+			let caption = s:CaptionFloat(line)
+			let title = 'Figure: ' . substitute(caption, '}\s*$', '', '')
+		elseif env == 'table'
+			let caption = s:CaptionFloat(line)
+			let title = 'Table: ' . substitute(caption, '}\s*$', '', '')
+		elseif env == 'lstlisting'
+			let caption = s:CaptionLstlisting(line)
+			let title = 'Listing: ' . substitute(caption, ',\s*$', '', '')
 		endif
 	endif
 
