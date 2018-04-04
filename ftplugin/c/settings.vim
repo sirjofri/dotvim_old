@@ -1,11 +1,11 @@
-" general settings for cpp files
+" general settings for c files
 "
 " Copyright 2018 sirjofri
 
-if exists("b:did_cpp_settings")
+if exists("b:did_c_settings")
 	finish
 endif
-let b:did_cpp_settings = 1
+let b:did_c_settings = 1
 
 setlocal foldmethod=syntax
 setlocal textwidth=78
