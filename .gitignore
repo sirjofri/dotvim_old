@@ -2,3 +2,5 @@ spell/de.utf-8.spl
 spell/de.utf-8.add.spl
 locals.vim
 .netrwhist
+syntax/de.vim
+syntax/en.vim
