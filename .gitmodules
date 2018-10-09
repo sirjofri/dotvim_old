@@ -2,10 +2,6 @@
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-	ignore = dirty
 [submodule "bundle/closetag.vim"]
 	path = bundle/closetag.vim
 	url = https://github.com/docunext/closetag.vim.git
@@ -36,3 +32,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
